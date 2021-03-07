@@ -9,22 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Address.belongsTo(models.Business, { foreignKey: 'businessId' })
     }
   }
   Address.init(
     {
       street: DataTypes.STRING,
       city: DataTypes.STRING,
-      state: DataTypes.STRING,
-      businessId: {
-        type: DataTypes.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'businesses',
-          key: 'id'
-        }
-      }
+      state: DataTypes.STRING
     },
     {
       sequelize,
