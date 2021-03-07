@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Andre Pato <anpato1994@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV='development' jest"
+  },
   "dependencies": {
     "pg": "^8.5.1",
     "sequelize": "^6.5.0"
