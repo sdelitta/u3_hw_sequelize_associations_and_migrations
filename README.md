@@ -39,4 +39,4 @@ Make sure to read the prompts **carefully**.
 
 ## Submission
 
-Pull requests are due next day at **10 am EST** following the [PR Submission Guidelines](https://github.com/SEI-R-1-25/template_pull_request)
+Pull requests are due next day at **10 am EST** following the [PR Submission Guidelines](https://github.com/SEI-R-4-26/template_pull_request)
