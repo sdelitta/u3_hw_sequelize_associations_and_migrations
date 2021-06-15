@@ -30,7 +30,7 @@ const getBusinessEmployees = async () => {
 const getBusinessAddressAndEmployee = async () => {
   try {
     //  Find all businesses and include the address and empoyees
-    // The address shoudl come before the employee
+    // The address should come before the employee
     //  return the result of your query
   } catch (error) {
     console.log(error)
