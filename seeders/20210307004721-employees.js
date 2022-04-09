@@ -1,15 +1,15 @@
 'use strict'
 const { Business } = require('../models')
-const faker = require('faker')
+const falso = require('@ngneat/falso')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const b = await Business.findAll({ raw: true })
     const employees = [...Array(200)].map((_) => {
       let r = Math.floor(Math.random() * b.length)
       return {
-        firstName: faker.name.firstName(),
-        lastName: faker.name.lastName(),
-        email: faker.internet.email(),
+        firstName: falso.randFirstName(),
+        lastName: falso.randLastName(),
+        email: falso.randEmail(),
         businessId: b[r].id,
         createdAt: new Date(),
         updatedAt: new Date()

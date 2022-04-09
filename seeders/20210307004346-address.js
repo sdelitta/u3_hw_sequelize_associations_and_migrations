@@ -1,13 +1,13 @@
 'use strict'
 const { Business } = require('../models')
-const faker = require('faker')
+const falso = require('@ngneat/falso')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const b = await Business.findAll({ raw: true })
     const addresses = [...Array(10)].map((_, i) => ({
-      street: faker.address.streetAddress(),
-      city: faker.address.city(),
-      state: faker.address.state(),
+      street: falso.randStreetAddress(),
+      city: falso.randCity(),
+      state: falso.randState(),
       businessId: b[i].id,
       createdAt: new Date(),
       updatedAt: new Date()
