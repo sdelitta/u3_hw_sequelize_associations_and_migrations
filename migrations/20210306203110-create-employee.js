@@ -17,6 +17,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      businessId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'businesses',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
